@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="PROJECT_PROEL2.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:PROJECT_PROEL2"
+    Shell.FlyoutBehavior="Flyout"
+    Title="PROJECT_PROEL2">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    
+    <ShellContent
+      Icon="C:\Users\ACT-STUDENT\Desktop\PROJECT_PROEL2\PROJECT_PROEL2\Resources\Images\loginprofile.jpg"
+      Title="Simple Login Form"
+      ContentTemplate="{DataTemplate local:MainPage}"
+      Route="MainPage" />
+
+    <ShellContent
+    Icon="C:\Users\ACT-STUDENT\Desktop\PROJECT_PROEL2\PROJECT_PROEL2\Resources\Images\registration.png"
+    Title="Registration Form"
+    ContentTemplate="{DataTemplate local:MainPage}"
+    Route="MainPage" />
+
+    <ShellContent
+    Title="Basic Calculator"
+    ContentTemplate="{DataTemplate local:MainPage}"
+    Icon="C:\Users\ACT-STUDENT\Desktop\PROJECT_PROEL2\PROJECT_PROEL2\Resources\Images\calculator.png"
+    Route="MainPage" />
+
+    <ShellContent
+    Title="Temperature Converter"
+    ContentTemplate="{DataTemplate local:MainPage}"
+    Icon="C:\Users\ACT-STUDENT\Desktop\PROJECT_PROEL2\PROJECT_PROEL2\Resources\Images\temperature.jpg"
+    Route="MainPage" />
+
+    <ShellContent
+    Title="Contact Form"
+    ContentTemplate="{DataTemplate local:MainPage}"
+    Route="MainPage" />
+
+    <ShellContent
+    Title="To-Do List Form"
+    ContentTemplate="{DataTemplate local:MainPage}"
+    Route="MainPage" />
+
+    <ShellContent
+    Title="Simple Quiz Form"
+    ContentTemplate="{DataTemplate local:MainPage}"
+    Route="MainPage" />
+
+    <ShellContent
+    Title="BMI Calculator"
+    ContentTemplate="{DataTemplate local:MainPage}"
+    Route="MainPage" />
+
+    <ShellContent
+    Title="Feedback Form"
+    ContentTemplate="{DataTemplate local:MainPage}"
+    Route="MainPage" />
+
+    <ShellContent
+    Title="Email Validator Form"
+    ContentTemplate="{DataTemplate local:MainPage}"
+    Route="MainPage" />
+
+    <ShellContent
+    Title="Password Strength Checker"
+    ContentTemplate="{DataTemplate local:MainPage}"
+    Route="MainPage" />
+
+    <ShellContent
+    Title="Date Picker Form"
+    ContentTemplate="{DataTemplate local:MainPage}"
+    Route="MainPage" />
+
+    <ShellContent
+    Title="Dropdown Selection Form"
+    ContentTemplate="{DataTemplate local:MainPage}"
+    Route="MainPage" />
+
+    <ShellContent
+    Title="Currency Converter"
+    ContentTemplate="{DataTemplate local:MainPage}"
+    Route="MainPage" />
+
+    <ShellContent
+    Title="Simple Chat Interface"
+    ContentTemplate="{DataTemplate local:MainPage}"
+    Route="MainPage" />
+
+    <ShellContent
+    Title="Timer Form"
+    ContentTemplate="{DataTemplate local:MainPage}"
+    Route="MainPage" />
+
+    <ShellContent
+    Title="Image Selector Form"
+    ContentTemplate="{DataTemplate local:MainPage}"
+    Route="MainPage" />
+
+    <ShellContent
+    Title="Checkbox Form"
+    ContentTemplate="{DataTemplate local:MainPage}"
+    Route="MainPage" />
+
+    <ShellContent
+    Title="Progress Bar Demo"
+    ContentTemplate="{DataTemplate local:MainPage}"
+    Route="MainPage" />
+
+    <ShellContent
+    Title="Simple Voting Form"
+    ContentTemplate="{DataTemplate local:MainPage}"
+    Route="MainPage" />
+
+    <ShellContent
+    Title="Currency Input Masking Form"
+    ContentTemplate="{DataTemplate local:MainPage}"
+    Route="MainPage" />
+</Shell>
