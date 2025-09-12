@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PROJECT_PROEL2"
+             x:Class="PROJECT_PROEL2.SimpleQuizForm"
+             Title="Simple Quiz Form">
+
+    <ScrollView>
+        <Border Stroke="Black" StrokeThickness="2"
+                BackgroundColor="White" Padding="10"
+                StrokeShape="RoundRectangle 25,25,25,25">
+
+            <VerticalStackLayout Spacing="20">
+
+                <CarouselView x:Name="quizCarousel"
+                              ItemsSource="{Binding Questions}"
+                              HeightRequest="320"
+                              IndicatorView="indicator"
+                              IsBounceEnabled="False"
+                              Loop="False"
+                              HorizontalOptions="FillAndExpand">
+
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <VerticalStackLayout Padding="12" Spacing="12">
+
+                                <Label Text="{Binding QuestionText}"
+                                       FontSize="20"
+                                       TextColor="Black"
+                                       FontAttributes="Bold" />
+
+                                <StackLayout BindableLayout.ItemsSource="{Binding Options}" Spacing="8">
+                                    <BindableLayout.ItemTemplate>
+                                        <DataTemplate>
+                                            <RadioButton Content="{Binding .}"
+                                                         Value="{Binding .}"
+                                                         GroupName="{Binding Id, Source={RelativeSource AncestorType={x:Type local:QuizQuestion}}}"
+                                                         CheckedChanged="OnOptionChecked"
+                                                         TextColor="Black"
+                                                         FontSize="16"
+                                                         Margin="0,4"/>
+                                        </DataTemplate>
+                                    </BindableLayout.ItemTemplate>
+                                </StackLayout>
+
+                            </VerticalStackLayout>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+
+                <IndicatorView x:Name="indicator"
+                               HorizontalOptions="Center"
+                               IndicatorsShape="Circle"
+                               IndicatorSize="8"
+                               Margin="0,0,0,25" />
+
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="12">
+                    <Button Text="Previous" Clicked="OnPreviousClicked" />
+                    <Button Text="Next" Clicked="OnNextClicked" />
+                    <Button Text="Submit" Clicked="OnSubmitQuiz" />
+                </HorizontalStackLayout>
+
+            </VerticalStackLayout>
+        </Border>
+    </ScrollView>
+</ContentPage>

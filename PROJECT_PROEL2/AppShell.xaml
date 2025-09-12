@@ -50,9 +50,9 @@
 
     <ShellContent
     Title="Simple Quiz Form"
-    ContentTemplate="{DataTemplate local:MainPage}"
+    ContentTemplate="{DataTemplate local:SimpleQuizForm}"
     Icon="simplequiz.png"
-    Route="MainPage" />
+    Route="SimpleQuizForm" />
 
     <ShellContent
     Title="BMI Calculator"

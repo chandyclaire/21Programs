@@ -68,12 +68,18 @@
 	  <Compile Update="MainPage.xaml.cs">
 	    <DependentUpon>MainPage.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Pages\SimpleQuizForm.xaml.cs">
+	    <DependentUpon>SimpleQuizForm.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Pages\SimpleLoginForm.xaml.cs">
 	    <DependentUpon>SimpleLoginForm.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Pages\SimpleQuizForm.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\SimpleLoginForm.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
