@@ -80,9 +80,9 @@
 
     <ShellContent
     Title="Date Picker Form"
-    ContentTemplate="{DataTemplate local:MainPage}"
+    ContentTemplate="{DataTemplate local:DatePickerForm}"
     Icon="datepicker.png"
-    Route="MainPage" />
+    Route="DatePickerForm" />
 
     <ShellContent
     Title="Dropdown Selection Form"
