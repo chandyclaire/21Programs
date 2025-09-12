@@ -38,9 +38,9 @@
 
     <ShellContent
     Title="Contact Form"
-    ContentTemplate="{DataTemplate local:MainPage}"
+    ContentTemplate="{DataTemplate local:ContactForm}"
     Icon="contact.jpg"
-    Route="MainPage" />
+    Route="ContactForm" />
 
     <ShellContent
     Title="To-Do List Form"

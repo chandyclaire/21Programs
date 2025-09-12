@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PROJECT_PROEL2.ContactForm"
+             Title="ContactForm">
+    <VerticalStackLayout>
+        <Label 
+            Text="Contact Form"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <VerticalStackLayout>
+            <Border Stroke="Black"
+                StrokeThickness="2"
+                StrokeShape="RoundRectangle 10"
+                Padding="16,8"
+                HorizontalOptions="Center">
+                <Entry 
+                    x:Name="entry_Name"
+                    PlaceholderColor="DimGray" 
+                    Placeholder="Name" 
+                    WidthRequest="200" 
+                    HeightRequest="15"></Entry>
+            </Border>
+
+            <Border Stroke="Black"
+                StrokeThickness="2"
+                StrokeShape="RoundRectangle 10"
+                Padding="16,8"
+                HorizontalOptions="Center">
+                <Entry 
+                    x:Name="entry_Email"
+                    PlaceholderColor="DimGray" 
+                    Placeholder="Email" 
+                    WidthRequest="200" 
+                    HeightRequest="15"></Entry>
+            </Border>
+
+            <Border Stroke="Black"
+                StrokeThickness="2"
+                StrokeShape="RoundRectangle 10"
+                Padding="16,8"
+                HorizontalOptions="Center">
+                <Entry 
+                    x:Name="entry_Phone"
+                    PlaceholderColor="DimGray" 
+                    Placeholder="Name" 
+                    WidthRequest="200" 
+                    HeightRequest="15"></Entry>
+            </Border>
+
+            <Border Stroke="Black"
+                StrokeThickness="2"
+                StrokeShape="RoundRectangle 10"
+                Padding="16,8"
+                HorizontalOptions="Center">
+                <Entry 
+                    x:Name="entry_Message"
+                    PlaceholderColor="DimGray" 
+                    Placeholder="Message" 
+                    WidthRequest="200" 
+                    HeightRequest="15"></Entry>
+            </Border>
+
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
