@@ -134,7 +134,7 @@
 
     <ShellContent
     Title="Currency Input Masking Form"
-    ContentTemplate="{DataTemplate local:MainPage}"
+    ContentTemplate="{DataTemplate local:CurrenyInputMaskingForm}"
     Icon="currencyinput.png"
-    Route="MainPage" />
+    Route="CurrenyInputMaskingForm" />
 </Shell>
