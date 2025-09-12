@@ -32,9 +32,9 @@
 
     <ShellContent
     Title="Temperature Converter"
-    ContentTemplate="{DataTemplate local:MainPage}"
+    ContentTemplate="{DataTemplate local:temperature}"
     Icon="temperatureconverter.jpeg"
-    Route="MainPage" />
+    Route="temperature" />
 
     <ShellContent
     Title="Contact Form"
