@@ -1,30 +1,38 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PROJECT_PROEL2"
              x:Class="PROJECT_PROEL2.TodoListForm"
              Title="TodoListForm">
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:BoolToColorConverter x:Key="BoolToColorConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <ScrollView>
-
         <VerticalStackLayout>
-
             <Border BackgroundColor="White" WidthRequest="500"
                     Stroke="Black" StrokeThickness="3"
-                     StrokeShape="RoundRectangle 25, 25, 25, 25"
+                    StrokeShape="RoundRectangle 25, 25, 25, 25"
                     HeightRequest="1000">
 
                 <VerticalStackLayout>
                     <Label TextColor="Black"
-                        Text="To do List" FontAttributes="Bold"
-                        VerticalOptions="Center" FontSize="50"
-                        HorizontalOptions="Center" Margin="0, 0, 0, 30"/>
+                           Text="To do List" FontAttributes="Bold"
+                           VerticalOptions="Center" FontSize="50"
+                           HorizontalOptions="Center" Margin="0, 0, 0, 30"/>
 
-                    <ListView x:Name="listView" Margin="50, 0, 0, 50"
-                              SelectionMode="Single" ItemSelected="OnItemSelected">
+                    <ListView x:Name="listView"
+                              Margin="50, 0, 0, 50"
+                              SelectionMode="Single"
+                              ItemSelected="OnItemSelected">
                         <ListView.ItemTemplate>
-                            <DataTemplate >
+                            <DataTemplate>
                                 <ViewCell>
-                                    <StackLayout x:Name="cellLayout">
+                                    <StackLayout Padding="10"
+                                                 BackgroundColor="{Binding IsSelected, Converter={StaticResource BoolToColorConverter}}">
                                         <Label Text="{Binding BulletTask}" TextColor="Black" />
                                     </StackLayout>
                                 </ViewCell>
@@ -34,10 +42,9 @@
 
                     <HorizontalStackLayout HorizontalOptions="Center">
                         <Button Text="Remove" WidthRequest="150" Margin="0, 0, 25, 0"
-                                Clicked="RemoveOrCancel" x:Name="RemoveOrCancelbtn"></Button>
-                        <Button Text="Add Task" WidthRequest="150" 
-                                Clicked="AddTask" x:Name="addTaskButton"></Button>
-
+                                Clicked="RemoveOrCancel" x:Name="RemoveOrCancelbtn"/>
+                        <Button Text="Add Task" WidthRequest="150"
+                                Clicked="AddTask" x:Name="addTaskButton"/>
                     </HorizontalStackLayout>
 
                     <VerticalStackLayout HorizontalOptions="Center">
@@ -47,7 +54,6 @@
                             <Entry x:Name="newTaskEntry" Placeholder="Enter new task" 
                                    WidthRequest="250" 
                                    IsVisible="False" TextColor="Black" />
-                            
                         </Border>
                     </VerticalStackLayout>
                 </VerticalStackLayout>
