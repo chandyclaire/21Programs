@@ -13,13 +13,13 @@
         Route="MainPage" />
     
     <ShellContent
-      Icon="C:\Users\ACT-STUDENT\Desktop\PROJECT_PROEL2\PROJECT_PROEL2\Resources\Images\loginprofile.jpg"
+      Icon="loginprofile.jpg"
       Title="Simple Login Form"
-      ContentTemplate="{DataTemplate local:MainPage}"
-      Route="MainPage" />
+      ContentTemplate="{DataTemplate local:SimpleLoginForm}"
+      Route="SimpleLoginForm" />
 
     <ShellContent
-    Icon="C:\Users\ACT-STUDENT\Desktop\PROJECT_PROEL2\PROJECT_PROEL2\Resources\Images\registration.png"
+    Icon="registration.png"
     Title="Registration Form"
     ContentTemplate="{DataTemplate local:MainPage}"
     Route="MainPage" />
@@ -27,97 +27,114 @@
     <ShellContent
     Title="Basic Calculator"
     ContentTemplate="{DataTemplate local:MainPage}"
-    Icon="C:\Users\ACT-STUDENT\Desktop\PROJECT_PROEL2\PROJECT_PROEL2\Resources\Images\calculator.png"
+    Icon="calculator.png"
     Route="MainPage" />
 
     <ShellContent
     Title="Temperature Converter"
     ContentTemplate="{DataTemplate local:MainPage}"
-    Icon="C:\Users\ACT-STUDENT\Desktop\PROJECT_PROEL2\PROJECT_PROEL2\Resources\Images\temperature.jpg"
+    Icon="temperatureconverter.jpeg"
     Route="MainPage" />
 
     <ShellContent
     Title="Contact Form"
     ContentTemplate="{DataTemplate local:MainPage}"
+    Icon="contact.jpg"
     Route="MainPage" />
 
     <ShellContent
     Title="To-Do List Form"
     ContentTemplate="{DataTemplate local:MainPage}"
+    Icon="todo.png"
     Route="MainPage" />
 
     <ShellContent
     Title="Simple Quiz Form"
     ContentTemplate="{DataTemplate local:MainPage}"
+    Icon="simplequiz.png"
     Route="MainPage" />
 
     <ShellContent
     Title="BMI Calculator"
     ContentTemplate="{DataTemplate local:MainPage}"
+    Icon="bmi.png"
     Route="MainPage" />
 
     <ShellContent
     Title="Feedback Form"
     ContentTemplate="{DataTemplate local:MainPage}"
+    Icon="feedback.png"
     Route="MainPage" />
 
     <ShellContent
     Title="Email Validator Form"
     ContentTemplate="{DataTemplate local:MainPage}"
+    Icon="emailvalidatorlogo.jpg"
     Route="MainPage" />
 
     <ShellContent
     Title="Password Strength Checker"
     ContentTemplate="{DataTemplate local:MainPage}"
+    Icon="passwordstrength.png"
     Route="MainPage" />
 
     <ShellContent
     Title="Date Picker Form"
     ContentTemplate="{DataTemplate local:MainPage}"
+    Icon="datepicker.png"
     Route="MainPage" />
 
     <ShellContent
     Title="Dropdown Selection Form"
     ContentTemplate="{DataTemplate local:MainPage}"
+    Icon="dropdown.jpg"
     Route="MainPage" />
 
     <ShellContent
     Title="Currency Converter"
     ContentTemplate="{DataTemplate local:MainPage}"
+    Icon="currencyconverter.png"
     Route="MainPage" />
 
     <ShellContent
     Title="Simple Chat Interface"
     ContentTemplate="{DataTemplate local:MainPage}"
+    Icon="chatlogo.png"
     Route="MainPage" />
 
     <ShellContent
     Title="Timer Form"
     ContentTemplate="{DataTemplate local:MainPage}"
+    Icon="timerlogo.png"
     Route="MainPage" />
 
     <ShellContent
     Title="Image Selector Form"
     ContentTemplate="{DataTemplate local:MainPage}"
+    Icon="imageselector.jpg"
     Route="MainPage" />
 
     <ShellContent
     Title="Checkbox Form"
     ContentTemplate="{DataTemplate local:MainPage}"
+    Icon="checkboxlogo.png"
     Route="MainPage" />
 
     <ShellContent
     Title="Progress Bar Demo"
     ContentTemplate="{DataTemplate local:MainPage}"
+    Icon="progress.jpg"
     Route="MainPage" />
 
     <ShellContent
     Title="Simple Voting Form"
     ContentTemplate="{DataTemplate local:MainPage}"
+    Icon="votinglogo.jpg"
     Route="MainPage" />
 
     <ShellContent
     Title="Currency Input Masking Form"
     ContentTemplate="{DataTemplate local:MainPage}"
+    Icon="currencyinput.png"
     Route="MainPage" />
 </Shell>
