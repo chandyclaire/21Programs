@@ -4,6 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:PROJECT_PROEL2"
+    xmlns:pages="clr-namespace:PROJECT_PROEL2.Pages"
     Shell.FlyoutBehavior="Flyout"
     Title="PROJECT_PROEL2">
 
@@ -26,9 +27,9 @@
 
     <ShellContent
     Title="Basic Calculator"
-    ContentTemplate="{DataTemplate local:MainPage}"
+    ContentTemplate="{DataTemplate pages:BasicCalculator}"
     Icon="calculator.png"
-    Route="MainPage" />
+    Route="BasicCalculator"/>
 
     <ShellContent
     Title="Temperature Converter"
