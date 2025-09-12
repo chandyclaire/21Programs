@@ -16,34 +16,36 @@
                 <VerticalStackLayout>
                     <Label TextColor="Black"
                         Text="To do List" FontAttributes="Bold"
-                        VerticalOptions="Center" 
-                        HorizontalOptions="Center" />
+                        VerticalOptions="Center" FontSize="50"
+                        HorizontalOptions="Center" Margin="0, 0, 0, 30"/>
 
-                    <ListView x:Name="listView" Margin="50, 0, 0, 50">
+                    <ListView x:Name="listView" Margin="50, 0, 0, 50"
+                              SelectionMode="Single" ItemSelected="OnItemSelected">
                         <ListView.ItemTemplate>
                             <DataTemplate >
                                 <ViewCell>
-                                    <StackLayout>
-                                        <Label Text="{Binding Task}" TextColor="Black"></Label>
+                                    <StackLayout x:Name="cellLayout">
                                         <Label Text="{Binding BulletTask}" TextColor="Black" />
                                     </StackLayout>
-
                                 </ViewCell>
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
 
-                    <HorizontalStackLayout HorizontalOptions="Center"> 
-                        <Button Text="View" WidthRequest="150" Margin="0, 0, 25, 0"></Button>
+                    <HorizontalStackLayout HorizontalOptions="Center">
+                        <Button Text="Remove" WidthRequest="150" Margin="0, 0, 25, 0"
+                                Clicked="RemoveOrCancel" x:Name="RemoveOrCancelbtn"></Button>
                         <Button Text="Add Task" WidthRequest="150" 
                                 Clicked="AddTask" x:Name="addTaskButton"></Button>
 
                     </HorizontalStackLayout>
 
                     <VerticalStackLayout HorizontalOptions="Center">
-                        <Border Stroke="Black" StrokeThickness="2" StrokeShape="RoundRectangle 10, 10, 10, 10"
+                        <Border Stroke="Black" StrokeThickness="2" 
+                                StrokeShape="RoundRectangle 10, 10, 10, 10"
                                 Margin="0, 25, 0, 0">
-                            <Entry x:Name="newTaskEntry" Placeholder="Enter new task" WidthRequest="250" 
+                            <Entry x:Name="newTaskEntry" Placeholder="Enter new task" 
+                                   WidthRequest="250" 
                                    IsVisible="False" TextColor="Black" />
                             
                         </Border>

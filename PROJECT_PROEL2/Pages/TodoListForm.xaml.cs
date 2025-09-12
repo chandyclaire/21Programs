@@ -2,11 +2,12 @@ namespace PROJECT_PROEL2;
 
 public partial class TodoListForm : ContentPage
 {
-	public TodoListForm()
+    private List<ToDoList> todoList;
+    public TodoListForm()
 	{
 		InitializeComponent();
 
-        var todoList = new List<ToDoList>
+        todoList = new List<ToDoList>
         {
             new ToDoList {Task = "Washing Dishes"},
             new ToDoList {Task = "Cleaning the house"},
@@ -16,7 +17,7 @@ public partial class TodoListForm : ContentPage
 
         foreach (var task in todoList)
         {
-            task.BulletTask = "ï " + task.Task;
+            task.BulletTask = "ÅE" + task.Task;
         }
 
         listView.ItemsSource = todoList;
@@ -30,46 +31,75 @@ public partial class TodoListForm : ContentPage
 
     private void AddTask(object sender, EventArgs e)
     {
-        // Toggle visibility of the Entry field
-        newTaskEntry.IsVisible = !newTaskEntry.IsVisible;
-
-        // Optionally, you can also change the button text to "Cancel" when the Entry is visible.
-        if (newTaskEntry.IsVisible)
+        if (addTaskButton.Text == "Add Task")
         {
-            addTaskButton.Text = "Cancel";
+            // Switch to add mode
+            newTaskEntry.IsVisible = true;
+            addTaskButton.Text = "Confirm";
+            RemoveOrCancelbtn.Text = "Cancel";
         }
-        else
+        else if (addTaskButton.Text == "Confirm")
         {
+            // Confirm new task
+            var newTaskText = newTaskEntry.Text?.Trim();
+
+            if (!string.IsNullOrEmpty(newTaskText))
+            {
+                var newTask = new ToDoList
+                {
+                    Task = newTaskText,
+                    BulletTask = "ÅE" + newTaskText
+                };
+
+                todoList.Add(newTask);
+
+                // Refresh list
+                listView.ItemsSource = null;
+                listView.ItemsSource = todoList;
+            }
+
+            // Reset UI
+            newTaskEntry.Text = string.Empty;
+            newTaskEntry.IsVisible = false;
             addTaskButton.Text = "Add Task";
+            RemoveOrCancelbtn.Text = "Remove";
         }
     }
 
     private void OnAddTaskConfirmed(object sender, EventArgs e)
     {
-        var newTaskText = newTaskEntry.Text?.Trim();
+       
+    }
 
-        if (!string.IsNullOrEmpty(newTaskText))
+    private void RemoveOrCancel(object sender, EventArgs e)
+    {
+        if (RemoveOrCancelbtn.Text == "Remove")
         {
-            var newTask = new ToDoList
+            // Remove selected task
+            var selectedTask = listView.SelectedItem as ToDoList;
+            if (selectedTask != null)
             {
-                Task = newTaskText,
-                BulletTask = "ï " + newTaskText
-            };
-
-            // Add new task to the list and refresh the ListView
-            var todoList = (List<ToDoList>)listView.ItemsSource;
-            todoList.Add(newTask);
-            listView.ItemsSource = null; // Reset the ListView's ItemsSource
-            listView.ItemsSource = todoList; // Reassign the updated list
+                todoList.Remove(selectedTask);
+                listView.ItemsSource = null;
+                listView.ItemsSource = todoList;
+            }
+            else
+            {
+                DisplayAlert("Remove Task", "Please select a task to remove.", "OK");
+            }
         }
+        else if (RemoveOrCancelbtn.Text == "Cancel")
+        {
+            // Cancel adding a task
+            newTaskEntry.Text = string.Empty;
+            newTaskEntry.IsVisible = false;
+            addTaskButton.Text = "Add Task";
+            RemoveOrCancelbtn.Text = "Remove";
+        }
+    }
 
-        // Clear the entry field after adding the task
-        newTaskEntry.Text = string.Empty;
-
-        // Hide the Entry again
-        newTaskEntry.IsVisible = false;
-
-        // Change the button text back to "Add Task"
-        addTaskButton.Text = "Add Task";
+    private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+    {
+       
     }
 }

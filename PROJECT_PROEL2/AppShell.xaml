@@ -44,9 +44,9 @@
 
     <ShellContent
     Title="To-Do List Form"
-    ContentTemplate="{DataTemplate local:MainPage}"
+    ContentTemplate="{DataTemplate local:TodoListForm}"
     Icon="todo.png"
-    Route="MainPage" />
+    Route="TodoListForm" />
 
     <ShellContent
     Title="Simple Quiz Form"
