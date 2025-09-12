@@ -21,8 +21,8 @@
     <ShellContent
     Icon="registration.png"
     Title="Registration Form"
-    ContentTemplate="{DataTemplate local:MainPage}"
-    Route="MainPage" />
+    ContentTemplate="{DataTemplate local:RegistrationForm}"
+    Route="RegistrationForm" />
 
     <ShellContent
     Title="Basic Calculator"
