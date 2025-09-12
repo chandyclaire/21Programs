@@ -68,13 +68,13 @@
 	  <Compile Update="MainPage.xaml.cs">
 	    <DependentUpon>MainPage.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="SimpleLoginForm.xaml.cs">
+	  <Compile Update="Pages\SimpleLoginForm.xaml.cs">
 	    <DependentUpon>SimpleLoginForm.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="SimpleLoginForm.xaml">
+	  <MauiXaml Update="Pages\SimpleLoginForm.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
