@@ -3,12 +3,51 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PROJECT_PROEL2.Pages.BasicCalculator"
              Title="BasicCalculator">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to Basic Calculator!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+
+        <Label Text="Basic Calculator" FontSize="24" HorizontalOptions="Center" />
+
         
-        
+        <Entry x:Name="Entry1" Placeholder="Enter first number" Keyboard="Numeric"/>
+        <Entry x:Name="Entry2" Placeholder="Enter second number" Keyboard="Numeric"/>
+
+       
+        <Grid ColumnSpacing="5" RowSpacing="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            
+            <Button Text="1" Grid.Row="0" Grid.Column="0" Clicked="OnDigitClicked"/>
+            <Button Text="2" Grid.Row="0" Grid.Column="1" Clicked="OnDigitClicked"/>
+            <Button Text="3" Grid.Row="0" Grid.Column="2" Clicked="OnDigitClicked"/>
+            <Button Text="4" Grid.Row="1" Grid.Column="0" Clicked="OnDigitClicked"/>
+            <Button Text="5" Grid.Row="1" Grid.Column="1" Clicked="OnDigitClicked"/>
+            <Button Text="6" Grid.Row="1" Grid.Column="2" Clicked="OnDigitClicked"/>
+            <Button Text="7" Grid.Row="2" Grid.Column="0" Clicked="OnDigitClicked"/>
+            <Button Text="8" Grid.Row="2" Grid.Column="1" Clicked="OnDigitClicked"/>
+            <Button Text="9" Grid.Row="2" Grid.Column="2" Clicked="OnDigitClicked"/>
+            <Button Text="0" Grid.Row="3" Grid.Column="1" Clicked="OnDigitClicked"/>
+        </Grid>
+
+        <HorizontalStackLayout Spacing="10">
+            <Button Text="Add" Clicked="OnAddClicked" WidthRequest="260"/>
+            <Button Text="Subtract" Clicked="OnSubtractClicked" WidthRequest="260"/>
+            <Button Text="Multiply" Clicked="OnMultiplyClicked" WidthRequest="260"/>
+            <Button Text="Divide" Clicked="OnDivideClicked" WidthRequest="260"/>
+        </HorizontalStackLayout>
+
+             
     </VerticalStackLayout>
+    
 </ContentPage>
