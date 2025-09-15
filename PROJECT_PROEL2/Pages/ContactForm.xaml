@@ -47,7 +47,7 @@
                 <Entry 
                     x:Name="entry_Phone"
                     PlaceholderColor="DimGray" 
-                    Placeholder="Name" 
+                    Placeholder="Phone" 
                     WidthRequest="200" 
                     HeightRequest="15"></Entry>
             </Border>
@@ -58,12 +58,13 @@
                 Padding="16,0"
                 Margin="10"
                 HorizontalOptions="Center">
-                <Entry 
+                <Editor
                     x:Name="entry_Message"
                     PlaceholderColor="DimGray" 
                     Placeholder="Message" 
                     WidthRequest="200" 
-                    HeightRequest="15"></Entry>
+                    HeightRequest="100">
+                </Editor>
             </Border>
 
             <Button

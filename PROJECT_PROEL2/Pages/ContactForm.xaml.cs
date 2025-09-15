@@ -1,3 +1,5 @@
+using System.Transactions;
+
 namespace PROJECT_PROEL2;
 
 public partial class ContactForm : ContentPage
@@ -11,13 +13,18 @@ public partial class ContactForm : ContentPage
     {
 		Contact currentContact = new Contact()
 		{
-			Email = entry_Email.Text,
-			Message = entry_Message.Text,
-			Name = entry_Name.Text,
-			Phone = entry_Phone.Text,
+			Email = entry_Email.Text.Trim(),
+			Message = entry_Message.Text.Trim(),
+			Name = entry_Name.Text.Trim(),
+			Phone = entry_Phone.Text.Trim(),
 		};
-			
-    }
+
+		string message = $"Name: {currentContact.Name}\n" +
+			$"Email: {currentContact.Email}\n" +
+			$"Phone: {currentContact.Phone}\n" +
+			$"Message: {currentContact.Message}";
+		DisplayAlert("Details", message, "okay");
+    }	
 }
 public class Contact
 {
