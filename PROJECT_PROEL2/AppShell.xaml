@@ -121,10 +121,9 @@
     Route="MainPage" />
 
     <ShellContent
-    Title="Progress Bar Demo"
-    ContentTemplate="{DataTemplate local:MainPage}"
+    ContentTemplate="{DataTemplate local:ProgressBar}"
     Icon="progress.jpg"
-    Route="MainPage" />
+    Route="ProgressBar" />
 
     <ShellContent
     Title="Simple Voting Form"

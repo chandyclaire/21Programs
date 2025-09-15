@@ -80,6 +80,9 @@
 	  <MauiXaml Update="Pages\EmailValidator.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Pages\ProgressBar.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\SimpleLoginForm.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
