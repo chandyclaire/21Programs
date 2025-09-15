@@ -36,6 +36,14 @@ public partial class SimpleQuizForm : ContentPage
             Options = new List<string> { "Google", "Microsoft", "Apple", "Oracle" },
             CorrectAnswer = "Microsoft"
         });
+        Questions.Add(new QuizQuestion
+        {
+            Id = "q4",
+            QuestionText = "Who is the founder of Asian College of Technology?",
+            Options = new List<string> { "Bebot Abellanosa", "Elon Musk", "Charlie Kirk", "Anchor Jave Arnejo" },
+            CorrectAnswer = "Bebot Abellanosa"
+
+        });
 
         BindingContext = this;
     }
