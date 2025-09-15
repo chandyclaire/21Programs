@@ -68,9 +68,9 @@
 
     <ShellContent
     Title="Email Validator Form"
-    ContentTemplate="{DataTemplate local:MainPage}"
+    ContentTemplate="{DataTemplate local:EmailValidator}"
     Icon="emailvalidatorlogo.jpg"
-    Route="MainPage" />
+    Route="EmailValidator" />
 
     <ShellContent
     Title="Password Strength Checker"
