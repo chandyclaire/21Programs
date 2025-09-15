@@ -13,7 +13,8 @@
             <Border Stroke="Black"
                 StrokeThickness="2"
                 StrokeShape="RoundRectangle 10"
-                Padding="16,8"
+                Padding="16,0"
+                Margin="10"
                 HorizontalOptions="Center">
                 <Entry 
                     x:Name="entry_Name"
@@ -26,7 +27,8 @@
             <Border Stroke="Black"
                 StrokeThickness="2"
                 StrokeShape="RoundRectangle 10"
-                Padding="16,8"
+                Padding="16,0"
+                Margin="10"
                 HorizontalOptions="Center">
                 <Entry 
                     x:Name="entry_Email"
@@ -39,7 +41,8 @@
             <Border Stroke="Black"
                 StrokeThickness="2"
                 StrokeShape="RoundRectangle 10"
-                Padding="16,8"
+                Padding="16,0"
+                Margin="10"
                 HorizontalOptions="Center">
                 <Entry 
                     x:Name="entry_Phone"
@@ -52,7 +55,8 @@
             <Border Stroke="Black"
                 StrokeThickness="2"
                 StrokeShape="RoundRectangle 10"
-                Padding="16,8"
+                Padding="16,0"
+                Margin="10"
                 HorizontalOptions="Center">
                 <Entry 
                     x:Name="entry_Message"
@@ -62,6 +66,11 @@
                     HeightRequest="15"></Entry>
             </Border>
 
+            <Button
+                Text="Continue"
+                WidthRequest="250"
+                Clicked="Continue_Click"
+                ></Button>
         </VerticalStackLayout>
     </VerticalStackLayout>
 </ContentPage>
