@@ -110,9 +110,9 @@
 
     <ShellContent
     Title="Image Selector Form"
-    ContentTemplate="{DataTemplate local:MainPage}"
+    ContentTemplate="{DataTemplate local:ImageSelectorForm}"
     Icon="imageselector.jpg"
-    Route="MainPage" />
+    Route="ImageSelectorForm" />
 
     <ShellContent
     Title="Checkbox Form"
