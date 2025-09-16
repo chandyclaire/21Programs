@@ -74,9 +74,9 @@
 
     <ShellContent
     Title="Password Strength Checker"
-    ContentTemplate="{DataTemplate local:MainPage}"
+    ContentTemplate="{DataTemplate local:PasswordStrengthChecker}"
     Icon="passwordstrength.png"
-    Route="MainPage" />
+    Route="PasswordStrengthChecker" />
 
     <ShellContent
     Title="Date Picker Form"
