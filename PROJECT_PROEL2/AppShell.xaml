@@ -92,9 +92,9 @@
 
     <ShellContent
     Title="Currency Converter"
-    ContentTemplate="{DataTemplate local:MainPage}"
+    ContentTemplate="{DataTemplate local:CurrencyConverter}"
     Icon="currencyconverter.png"
-    Route="MainPage" />
+    Route="CurrencyConverter" />
 
     <ShellContent
     Title="Simple Chat Interface"
