@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PROJECT_PROEL2.FeedbackForm"
+             Title="FeedbackForm">
+    <StackLayout Padding="20">
+        <Editor x:Name="feedbackEditor" 
+                Placeholder="Enter your feedback here" 
+                AutoSize="TextChanges" 
+                HeightRequest="150" />
+
+        <Slider x:Name="ratingSlider" 
+                Minimum="0" 
+                Maximum="5" 
+                Value="5" 
+                ThumbColor="Blue" 
+                MinimumTrackColor="LightBlue" 
+                MaximumTrackColor="LightGray"
+                ValueChanged="OnSliderValueChanged"/>
+
+        <Label x:Name="ratingLabel" 
+               Text="{Binding Source={x:Reference ratingSlider}, Path=Value, StringFormat='Rating: {0:F1}'}" 
+               HorizontalOptions="Center" />
+
+        <Button x:Name="submitButton" 
+                Text="Submit" 
+                Clicked="OnSubmitClicked" 
+                HorizontalOptions="Center" />
+
+
+        <Label x:Name="feedbackSubmittedMessage" 
+               Text="Your feedback has been submitted. We appreciate your input!"
+               IsVisible="False" 
+               HorizontalOptions="Center" 
+               TextColor="Yellow" 
+               FontSize="Medium" />
+
+        <Button x:Name="backButton"
+                Text="Back"
+                IsVisible="False"
+                Clicked="OnBackClicked"
+                HorizontalOptions="Center" />
+    </StackLayout>
+</ContentPage>

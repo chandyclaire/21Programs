@@ -62,9 +62,9 @@
 
     <ShellContent
     Title="Feedback Form"
-    ContentTemplate="{DataTemplate local:MainPage}"
+    ContentTemplate="{DataTemplate local:FeedbackForm}"
     Icon="feedback.png"
-    Route="MainPage" />
+    Route="FeedbackForm" />
 
     <ShellContent
     Title="Email Validator Form"
