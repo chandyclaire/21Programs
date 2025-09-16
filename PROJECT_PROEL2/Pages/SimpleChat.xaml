@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PROJECT_PROEL2.SimpleChat"
+             Title="SimpleChat">
+    <VerticalStackLayout Padding="10" Spacing="10">
+        <CollectionView x:Name="MessagesView" 
+                        ItemsSource="{Binding Chats}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border Stroke="CadetBlue"
+                        StrokeThickness="1"
+                        StrokeShape="RoundRectangle 2"
+                        Padding="16,5"
+                        HorizontalOptions="Center">
+                        <Label Text="{Binding}" 
+                               FontSize="14" />
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!-- Input and Send button -->
+        <HorizontalStackLayout Spacing="5" HorizontalOptions="Center">
+            <Border Stroke="Black"
+                StrokeThickness="1"
+                StrokeShape="RoundRectangle 10"
+                Padding="16,0"
+                HorizontalOptions="Center">
+                <Entry x:Name="MessageEntry" 
+                       MinimumWidthRequest="200"
+                       Placeholder="Type a message..."/>
+            </Border>
+            <Button Text="Send" 
+                    Clicked="OnSendClicked" />
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>

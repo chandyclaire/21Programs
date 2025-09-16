@@ -98,9 +98,9 @@
 
     <ShellContent
     Title="Simple Chat Interface"
-    ContentTemplate="{DataTemplate local:MainPage}"
+    ContentTemplate="{DataTemplate local:SimpleChat}"
     Icon="chatlogo.png"
-    Route="MainPage" />
+    Route="SimpleChat" />
 
     <ShellContent
     Title="Timer Form"
