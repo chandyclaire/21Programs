@@ -128,9 +128,9 @@
 
     <ShellContent
     Title="Simple Voting Form"
-    ContentTemplate="{DataTemplate local:MainPage}"
+    ContentTemplate="{DataTemplate local:SimpleVotingForm}"
     Icon="votinglogo.jpg"
-    Route="MainPage" />
+    Route="SimpleVotingForm" />
 
     <ShellContent
     Title="Currency Input Masking Form"
