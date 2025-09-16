@@ -86,9 +86,9 @@
 
     <ShellContent
     Title="Dropdown Selection Form"
-    ContentTemplate="{DataTemplate local:MainPage}"
+    ContentTemplate="{DataTemplate local:Dropdown}"
     Icon="dropdown.jpg"
-    Route="MainPage" />
+    Route="Dropdown" />
 
     <ShellContent
     Title="Currency Converter"
