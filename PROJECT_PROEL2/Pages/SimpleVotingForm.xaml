@@ -10,13 +10,13 @@
 
         <VerticalStackLayout Padding="10">
             <Label 
-                Text="Simple Voting Form"
+                Text="Presidential Vote"
                 FontSize="Large"
                 HorizontalOptions="Center"
                 VerticalOptions="Center" />
 
             <Label 
-                Text="Show options with RadioButtons, vote button, display results in percentage."
+                Text="Vote for the people"
                 HorizontalOptions="Center" 
                 VerticalOptions="Center" />
 

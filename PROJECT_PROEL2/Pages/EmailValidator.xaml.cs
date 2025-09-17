@@ -12,7 +12,7 @@ public partial class EmailValidator : ContentPage
 
     private void ValidateEmail_Click(object sender, EventArgs e)
     {
-		if(!reg.IsMatch(entry_Email.Text))
+		if(!reg.IsMatch(entry_Email.Text.ToLower()))
 		{
 			DisplayAlert("Email Validation", "The email is invalid", "continue");
 			return;

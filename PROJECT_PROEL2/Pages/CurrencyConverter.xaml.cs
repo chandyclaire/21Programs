@@ -9,9 +9,10 @@ public partial class CurrencyConverter : ContentPage
 
     private void ConvertCurrency_Click(object sender, EventArgs e)
     {
-		if (FromCurrency.SelectedIndex == -1 || ToCurrency.SelectedIndex == -1)
+		if (FromCurrency.SelectedIndex == -1 || ToCurrency.SelectedIndex == -1 || string.IsNullOrEmpty(entry_Amount.Text))
 		{
-            DisplayAlert("Convertion", "Please select a value to convert", "Okay");
+            DisplayAlert("Error", "Please input value and select convertion", "Okay");
+			return;
         }
         int amount = int.Parse(entry_Amount.Text); 
 
