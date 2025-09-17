@@ -24,7 +24,7 @@ public partial class CheckboxForm : ContentPage
 			{
 				BindingContext = interest,
 				Color = Colors.Black,
-				C
+				
 			};
 
 			var label = new Label
