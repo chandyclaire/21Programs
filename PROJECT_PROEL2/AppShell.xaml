@@ -104,9 +104,9 @@
 
     <ShellContent
     Title="Timer Form"
-    ContentTemplate="{DataTemplate local:MainPage}"
+    ContentTemplate="{DataTemplate local:Timer}"
     Icon="timerlogo.png"
-    Route="MainPage" />
+    Route="Timer" />
 
     <ShellContent
     Title="Image Selector Form"
