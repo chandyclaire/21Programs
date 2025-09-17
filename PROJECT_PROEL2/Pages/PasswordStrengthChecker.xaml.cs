@@ -39,7 +39,7 @@ public partial class PasswordStrengthChecker : ContentPage
     private (double score, string label) EvaluatePassword(string pw)
     {
         if (string.IsNullOrEmpty(pw))
-            return (0.0, "ó");
+            return (0.0, "ÅE");
 
 
         double score = 0.0;
@@ -111,7 +111,7 @@ public partial class PasswordStrengthChecker : ContentPage
 
 
         if (!Regex.IsMatch(pw, "[0-9]"))
-            return "Add numbers (0ñ9).";
+            return "Add numbers (0ÅE).";
 
 
         if (!Regex.IsMatch(pw, "[^a-zA-Z0-9]"))
@@ -122,7 +122,7 @@ public partial class PasswordStrengthChecker : ContentPage
             return "Consider increasing length or mixing additional character types.";
 
 
-        return "Nice ó this is a good password. Consider using a password manager for storage.";
+        return "Nice ÅEthis is a good password. Consider using a password manager for storage.";
     }
 
 
