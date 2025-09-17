@@ -38,9 +38,9 @@
 
     <ShellContent
     Title="Contact Form"
-    ContentTemplate="{DataTemplate local:MainPage}"
+    ContentTemplate="{DataTemplate local:ContactForm}"
     Icon="contact.jpg"
-    Route="MainPage" />
+    Route="ContactForm" />
 
     <ShellContent
     Title="To-Do List Form"
@@ -68,9 +68,9 @@
 
     <ShellContent
     Title="Email Validator Form"
-    ContentTemplate="{DataTemplate local:MainPage}"
+    ContentTemplate="{DataTemplate local:EmailValidator}"
     Icon="emailvalidatorlogo.jpg"
-    Route="MainPage" />
+    Route="EmailValidator" />
 
     <ShellContent
     Title="Password Strength Checker"
@@ -92,15 +92,15 @@
 
     <ShellContent
     Title="Currency Converter"
-    ContentTemplate="{DataTemplate local:MainPage}"
+    ContentTemplate="{DataTemplate local:CurrencyConverter}"
     Icon="currencyconverter.png"
-    Route="MainPage" />
+    Route="CurrencyConverter" />
 
     <ShellContent
     Title="Simple Chat Interface"
-    ContentTemplate="{DataTemplate local:MainPage}"
+    ContentTemplate="{DataTemplate local:SimpleChat}"
     Icon="chatlogo.png"
-    Route="MainPage" />
+    Route="SimpleChat" />
 
     <ShellContent
     Title="Timer Form"
@@ -121,10 +121,9 @@
     Route="CheckboxForm" />
 
     <ShellContent
-    Title="Progress Bar Demo"
-    ContentTemplate="{DataTemplate local:MainPage}"
+    ContentTemplate="{DataTemplate local:ProgressBar}"
     Icon="progress.jpg"
-    Route="MainPage" />
+    Route="ProgressBar" />
 
     <ShellContent
     Title="Simple Voting Form"

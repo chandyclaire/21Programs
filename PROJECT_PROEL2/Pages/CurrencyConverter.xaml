@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PROJECT_PROEL2.CurrencyConverter"
+             Title="CurrencyConverter">
+    <VerticalStackLayout>
+        <Label 
+            Text="Convert"
+            FontSize="Large"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+
+        <HorizontalStackLayout
+            Padding="20"
+            HorizontalOptions="Center">
+
+            <Picker Title="Select Currency" x:Name="FromCurrency" >
+                <Picker.Items>
+                    <x:String>USD</x:String>
+                    <x:String>PHP</x:String>
+                    <x:String>EUR</x:String>
+                    <x:String>GBP</x:String>
+                    <x:String>JPY</x:String>
+                    <x:String>RMB</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label 
+                Text=" ➜"
+                FontSize="Medium"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+            
+            <Picker Title="To Currency" x:Name="ToCurrency">
+                <Picker.Items>
+                    <x:String>USD</x:String>
+                    <x:String>PHP</x:String>
+                    <x:String>EUR</x:String>
+                    <x:String>GBP</x:String>
+                    <x:String>JPY</x:String>
+                    <x:String>RMB</x:String>
+                </Picker.Items>
+            </Picker>
+        </HorizontalStackLayout>
+
+        <Border Stroke="Black"
+            StrokeThickness="2"
+            StrokeShape="RoundRectangle 10"
+            Margin="10"
+            HorizontalOptions="Center">
+            <Entry 
+                x:Name="entry_Amount"
+                PlaceholderColor="DimGray" 
+                Placeholder="Amount" 
+                WidthRequest="250" 
+                HeightRequest="15"></Entry>
+        </Border>
+
+        <Button
+            Text="Convert"
+            WidthRequest="250"
+            Clicked="ConvertCurrency_Click"
+            ></Button>
+    </VerticalStackLayout>
+</ContentPage>
