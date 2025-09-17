@@ -122,6 +122,7 @@
     Route="CheckboxForm" />
 
     <ShellContent
+    Title="Progress Bar"
     ContentTemplate="{DataTemplate local:ProgressBar}"
     Icon="progress.jpg"
     Route="ProgressBar" />
