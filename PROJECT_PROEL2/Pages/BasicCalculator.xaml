@@ -40,12 +40,13 @@
             <Button Text="0" Grid.Row="3" Grid.Column="1" Clicked="OnDigitClicked"/>
         </Grid>
 
-        <HorizontalStackLayout Spacing="10">
-            <Button Text="Add" Clicked="OnAddClicked" WidthRequest="260"/>
-            <Button Text="Subtract" Clicked="OnSubtractClicked" WidthRequest="260"/>
-            <Button Text="Multiply" Clicked="OnMultiplyClicked" WidthRequest="260"/>
-            <Button Text="Divide" Clicked="OnDivideClicked" WidthRequest="260"/>
-        </HorizontalStackLayout>
+        <FlexLayout FlowDirection="LeftToRight" JustifyContent="SpaceEvenly"
+                    >
+            <Button Text="Add" Clicked="OnAddClicked" WidthRequest="120" />
+            <Button Text="Subtract" Clicked="OnSubtractClicked" WidthRequest="120"/>
+            <Button Text="Multiply" Clicked="OnMultiplyClicked" WidthRequest="120"/>
+            <Button Text="Divide" Clicked="OnDivideClicked" WidthRequest="120"/>
+        </FlexLayout>
 
              
     </VerticalStackLayout>
