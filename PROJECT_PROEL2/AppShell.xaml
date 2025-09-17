@@ -116,9 +116,9 @@
 
     <ShellContent
     Title="Checkbox Form"
-    ContentTemplate="{DataTemplate local:MainPage}"
+    ContentTemplate="{DataTemplate local:CheckboxForm}"
     Icon="checkboxlogo.png"
-    Route="MainPage" />
+    Route="CheckboxForm" />
 
     <ShellContent
     Title="Progress Bar Demo"
