@@ -21,8 +21,8 @@
     <ShellContent
     Icon="registration.png"
     Title="Registration Form"
-    ContentTemplate="{DataTemplate local:MainPage}"
-    Route="MainPage" />
+    ContentTemplate="{DataTemplate local:RegistrationForm}"
+    Route="RegistrationForm" />
 
     <ShellContent
     Title="Basic Calculator"
@@ -62,9 +62,9 @@
 
     <ShellContent
     Title="Feedback Form"
-    ContentTemplate="{DataTemplate local:MainPage}"
+    ContentTemplate="{DataTemplate local:FeedbackForm}"
     Icon="feedback.png"
-    Route="MainPage" />
+    Route="FeedbackForm" />
 
     <ShellContent
     Title="Email Validator Form"
@@ -80,9 +80,9 @@
 
     <ShellContent
     Title="Date Picker Form"
-    ContentTemplate="{DataTemplate local:MainPage}"
+    ContentTemplate="{DataTemplate local:DatePickerForm}"
     Icon="datepicker.png"
-    Route="MainPage" />
+    Route="DatePickerForm" />
 
     <ShellContent
     Title="Dropdown Selection Form"
@@ -110,9 +110,9 @@
 
     <ShellContent
     Title="Image Selector Form"
-    ContentTemplate="{DataTemplate local:MainPage}"
+    ContentTemplate="{DataTemplate local:ImageSelectorForm}"
     Icon="imageselector.jpg"
-    Route="MainPage" />
+    Route="ImageSelectorForm" />
 
     <ShellContent
     Title="Checkbox Form"

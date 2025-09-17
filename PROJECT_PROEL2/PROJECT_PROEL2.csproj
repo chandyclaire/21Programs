@@ -77,19 +77,19 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Pages\CheckboxForm.xaml">
+	  <MauiXaml Update="Pages\DatePickerForm.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\CurrenyInputMaskingForm.xaml">
+	  <MauiXaml Update="Pages\FeedbackForm.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\SimpleQuizForm.xaml">
+	  <MauiXaml Update="Pages\ImageSelectorForm.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\SimpleLoginForm.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\SimpleVotingForm.xaml">
+	  <MauiXaml Update="Pages\RegistrationForm.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PROJECT_PROEL2.ImageSelectorForm"
+             Title="ImageSelectorForm">
+    
+    <StackLayout Padding="20" Spacing="20">
+    
+
+        <Image x:Name="SelectedImage"
+               WidthRequest="300"
+               HeightRequest="300"
+               Aspect="AspectFit" />
+
+        <Button Text="Pick Image"
+        Clicked="OnPickImageClicked"/>
+    </StackLayout>
+</ContentPage>
