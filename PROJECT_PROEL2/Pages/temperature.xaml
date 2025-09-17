@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PROJECT_PROEL2.temperature"
+             Title="temperature">
+    <VerticalStackLayout>
+        <Label 
+            Text="Temperature Converter"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Entry x:Name="InputEntry"
+               Placeholder="Enter Temperature"
+               Keyboard="Numeric"/>
+
+        <Picker x:Name="ConversionPicker"
+                Title="Select Conversion">
+            <Picker.Items>
+                <x:String>Celcius to Fahrenheit</x:String>
+                <x:String>Fahrenheit to Celcius</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Button Text="Convert"
+                Clicked="OnConvertClicked"
+                BackgroundColor="#2196f3"
+                TextColor="White"
+                CornerRadius="10"/>
+
+        <Label x:Name="ResultLabel"
+               FontSize="20"
+               TextColor="White"
+               HorizontalOptions="Center"/>
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -32,9 +32,9 @@
 
     <ShellContent
     Title="Temperature Converter"
-    ContentTemplate="{DataTemplate local:MainPage}"
+    ContentTemplate="{DataTemplate local:temperature}"
     Icon="temperatureconverter.jpeg"
-    Route="MainPage" />
+    Route="temperature" />
 
     <ShellContent
     Title="Contact Form"
@@ -74,9 +74,9 @@
 
     <ShellContent
     Title="Password Strength Checker"
-    ContentTemplate="{DataTemplate local:MainPage}"
+    ContentTemplate="{DataTemplate local:PasswordStrengthChecker}"
     Icon="passwordstrength.png"
-    Route="MainPage" />
+    Route="PasswordStrengthChecker" />
 
     <ShellContent
     Title="Date Picker Form"
