@@ -13,7 +13,8 @@
                Placeholder="Enter Temperature"
                Keyboard="Numeric"/>
 
-        <Picker x:Name="ConversionPicker"
+        
+        <Picker x:Name="ConversionPicker" 
                 Title="Select Conversion">
             <Picker.Items>
                 <x:String>Celcius to Fahrenheit</x:String>
@@ -29,7 +30,7 @@
 
         <Label x:Name="ResultLabel"
                FontSize="20"
-               TextColor="White"
+               TextColor="Black"
                HorizontalOptions="Center"/>
 
     </VerticalStackLayout>
