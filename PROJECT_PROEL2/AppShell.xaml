@@ -56,9 +56,9 @@
 
     <ShellContent
     Title="BMI Calculator"
-    ContentTemplate="{DataTemplate local:MainPage}"
+    ContentTemplate="{DataTemplate local:BMI}"
     Icon="bmi.png"
-    Route="MainPage" />
+    Route="BMI" />
 
     <ShellContent
     Title="Feedback Form"
@@ -86,9 +86,9 @@
 
     <ShellContent
     Title="Dropdown Selection Form"
-    ContentTemplate="{DataTemplate local:MainPage}"
+    ContentTemplate="{DataTemplate local:Dropdown}"
     Icon="dropdown.jpg"
-    Route="MainPage" />
+    Route="Dropdown" />
 
     <ShellContent
     Title="Currency Converter"

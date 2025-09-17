@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PROJECT_PROEL2.BMI"
+             Title="BMI">
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        <Label Text="BMI Calculator"
+            FontSize="24"
+            HorizontalOptions="Center"
+            />
+
+        <Entry x:Name="WeightEntry"
+            TextColor="Black"
+            Placeholder="Enter weight (kg)"
+            Keyboard="Numeric" />
+
+        <Entry x:Name="HeightEntry"
+            TextColor="Black"
+            Placeholder="Enter height (cm)"
+            Keyboard="Numeric" />
+
+        <Button Text="Calculate BMI"
+             Clicked="OnCalculateBMIClicked"
+             BackgroundColor="#8FD9FB"/>
+
+        <Label x:Name="ResultLabel"
+            FontSize="18"
+            TextColor="DarkBlue"
+            HorizontalOptions="Center" />
+
+    </VerticalStackLayout>
+
+</ContentPage>
