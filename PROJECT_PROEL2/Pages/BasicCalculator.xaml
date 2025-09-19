@@ -7,7 +7,7 @@
     <VerticalStackLayout Padding="20" Spacing="15">
 
 
-        <Label Text="Basic Calculator" FontSize="24" HorizontalOptions="Center" />
+        <Label Text="Basic Calculator" TextColor="#AF3E3E" FontSize="24" HorizontalOptions="Center" />
 
         
         <Entry x:Name="Entry1" Placeholder="Enter first number" Keyboard="Numeric"/>

@@ -15,32 +15,32 @@ public partial class SimpleQuizForm : ContentPage
         Questions.Add(new QuizQuestion
         {
             Id = "q1",
-            QuestionText = "What is '2' + '2' ",
-            Options = new List<string> { "4", "22", "2", "0" },
-            CorrectAnswer = "22"
+            QuestionText = "What is the capital of France?",
+            Options = new List<string> { "Berlin", "Madrid", "Paris", "Rome" },
+            CorrectAnswer = "Paris"
         });
 
         Questions.Add(new QuizQuestion
         {
             Id = "q2",
-            QuestionText = "Who is the Main Character of Lord of the Mysteries",
-            Options = new List<string> { "navI htieK nolyaB", "Zessuah Ray Nellas", "Alger Eggers", "Klein Moretti" },
-            CorrectAnswer = "Klein Moretti"
+            QuestionText = "Which planet is known as the Red Planet?",
+            Options = new List<string> { "Earth", "Mars", "Venus", "Saturn" },
+            CorrectAnswer = "Mars"
         });
 
         Questions.Add(new QuizQuestion
         {
             Id = "q3",
-            QuestionText = "Who developed C#?",
-            Options = new List<string> { "Google", "Microsoft", "Apple", "Oracle" },
-            CorrectAnswer = "Microsoft"
+            QuestionText = "What is the largest ocean on Earth?",
+            Options = new List<string> { "Atlantic", "Pacific", "Indian", "Arctic" },
+            CorrectAnswer = "Pacific"
         });
         Questions.Add(new QuizQuestion
         {
             Id = "q4",
-            QuestionText = "Who is the founder of Asian College of Technology?",
-            Options = new List<string> { "Bebot Abellanosa", "Elon Musk", "Charlie Kirk", "Anchor Jave Arnejo" },
-            CorrectAnswer = "Bebot Abellanosa"
+            QuestionText = "Who is the Presiden in Philippines?",
+            Options = new List<string> { "Bongbong Marcos", "Rodrigo Duterte", "Zessuah Ray Nellas", "Anchor Jave Arnejo" },
+            CorrectAnswer = "Bongbong Marcos"
 
         });
 

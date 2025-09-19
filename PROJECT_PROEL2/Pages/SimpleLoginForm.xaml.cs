@@ -14,7 +14,7 @@ public partial class SimpleLoginForm : ContentPage
 
         if (username == "chandyclaire" && password == "chandy")
         {
-            DisplayAlert("Login Success", $"Welcome{username}!","OK");
+            DisplayAlert("Login Success", $"Welcome {username}!","OK");
             UsernameEntry.Text = string.Empty;
             PasswordEntry.Text = string.Empty;
         }
