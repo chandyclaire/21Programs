@@ -2,21 +2,49 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PROJECT_PROEL2.Timer"
-             Title="Timer">
+             Title="">
 
 
-    <VerticalStackLayout Padding="20" Spacing="15">
-        
-        <Entry x:Name="SecondsEntry"
-           Placeholder="Enter seconds"
-           Keyboard="Numeric" />
+    <VerticalStackLayout Padding="30" Spacing="25">
+       
+        <Label Text="⏳ Countdown Timer"
+               FontSize="28"
+               FontAttributes="Bold"
+               TextColor="#CD5656"
+               HorizontalOptions="Center" />
+
+        <Frame BackgroundColor="#FFF5F5"
+               CornerRadius="10"
+               Padding="10"
+               HasShadow="False"
+               WidthRequest="250"
+               HeightRequest="70">
+
+            <Entry x:Name="SecondsEntry"
+                   Placeholder="Enter seconds"
+                   Keyboard="Numeric"
+                   FontSize="18"
+                   TextColor="#333333"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="Center" />
+        </Frame>
 
         <Button Text="Start Countdown"
-            Clicked="OnStartClicked" />
+                BackgroundColor="#CD5656"
+                TextColor="White"
+                FontAttributes="Bold"
+                CornerRadius="12"
+                WidthRequest="250"
+                HeightRequest="50"
+                Clicked="OnStartClicked" />
 
         <Label x:Name="TimerLabel"
-           Text="Time left: 0"
-           FontSize="24"
-           HorizontalOptions="Center" />
+               Text="Time left: 0"
+               FontSize="26"
+               FontAttributes="Bold"
+               TextColor="#333333"
+               HorizontalOptions="Center"
+               Margin="0,20,0,0" />
+
     </VerticalStackLayout>
 </ContentPage>

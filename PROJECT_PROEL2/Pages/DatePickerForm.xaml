@@ -2,15 +2,36 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PROJECT_PROEL2.DatePickerForm"
-             Title="DatePickerForm">
+             Title="">
 
 
-    <VerticalStackLayout Padding="24" Spacing="18" HorizontalOptions="Fill" VerticalOptions="Center">
-        <Label Text="Choose a Date" FontSize="20" HorizontalOptions="Center"/>
+    <VerticalStackLayout Padding="30" Spacing="25">
+        <Label Text="DatePicker Form" FontSize="24" HorizontalOptions="Center" TextColor="#AF3E3E"/>
+        <Label Text="📅 Choose a Date"
+               FontSize="26"
+               FontAttributes="Bold"
+               TextColor="#CD5656"
+               HorizontalOptions="Center" />
 
-        <DatePicker x:Name="DatePicker" Format="D" DateSelected="DatePicker_DateSelected"/>
-        <Label x:Name="SelectDateLabel" FontSize="16" HorizontalOptions ="Center"/>
+        <Frame CornerRadius="10"
+               Padding="10"
+               BorderColor="#CD5656"
+               BackgroundColor="White"
+               HasShadow="True"
+               WidthRequest="280">
+            <DatePicker x:Name="DatePicker"
+                        Format="D"
+                        TextColor="Black"
+                        FontSize="16"
+                        DateSelected="DatePicker_DateSelected"
+                        HorizontalOptions="FillAndExpand" />
+        </Frame>
 
+        <Label x:Name="SelectDateLabel"
+               FontSize="18"
+               TextColor="Green"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
 
     </VerticalStackLayout>
 </ContentPage>

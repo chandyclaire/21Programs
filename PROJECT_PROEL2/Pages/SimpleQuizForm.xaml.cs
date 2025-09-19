@@ -12,7 +12,6 @@ public partial class SimpleQuizForm : ContentPage
     {
         InitializeComponent();
 
-        // Sample questions
         Questions.Add(new QuizQuestion
         {
             Id = "q1",
@@ -74,38 +73,51 @@ public partial class SimpleQuizForm : ContentPage
     {
         if (!e.Value) return;
 
-        if (sender is RadioButton rb && rb.BindingContext is string option)
+        if (sender is RadioButton rb)
         {
-            if (rb.Parent?.BindingContext is QuizQuestion question)
+            var question = FindParentQuizQuestion(rb);
+            if (question != null)
             {
-                question.SelectedAnswer = option;
+                question.SelectedAnswer = rb.Value?.ToString();
             }
         }
     }
-}
 
-public class QuizQuestion : INotifyPropertyChanged
-{
-    public string Id { get; set; }             // unique id per question
-    public string QuestionText { get; set; }
-    public List<string> Options { get; set; }
-    public string CorrectAnswer { get; set; }
-
-    private string selectedAnswer;
-    public string SelectedAnswer
+    private QuizQuestion FindParentQuizQuestion(BindableObject element)
     {
-        get => selectedAnswer;
-        set
+        while (element != null)
         {
-            if (selectedAnswer != value)
-            {
-                selectedAnswer = value;
-                OnPropertyChanged();
-            }
+            if (element.BindingContext is QuizQuestion question)
+                return question;
+
+            element = (element as Element)?.Parent;
         }
+        return null;
     }
 
-    public event PropertyChangedEventHandler PropertyChanged;
-    void OnPropertyChanged([CallerMemberName] string p = null) =>
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(p));
+    public class QuizQuestion : INotifyPropertyChanged
+    {
+        public string Id { get; set; }
+        public string QuestionText { get; set; }
+        public List<string> Options { get; set; }
+        public string CorrectAnswer { get; set; }
+
+        private string selectedAnswer;
+        public string SelectedAnswer
+        {
+            get => selectedAnswer;
+            set
+            {
+                if (selectedAnswer != value)
+                {
+                    selectedAnswer = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        void OnPropertyChanged([CallerMemberName] string p = null) =>
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(p));
+    }
 }

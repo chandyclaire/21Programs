@@ -2,25 +2,38 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PROJECT_PROEL2.ProgressBar">
-    <VerticalStackLayout>
-        <Label 
-            Text="ProgressBar"
-            FontSize="Large"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
 
-        <ProgressBar x:Name="progressBar"
-                     ProgressColor="Red"
-                     WidthRequest="300"
-                     HeightRequest="20"
-                     Margin="2"/> 
+        <VerticalStackLayout Padding="30" Spacing="30" >
 
-        <Button
-            Text="Start"
-            WidthRequest="250"
-            Clicked="ProgressBar_Click"
-            ></Button>
+            <Label Text="Progress Tracker"
+               FontSize="28"
+               FontAttributes="Bold"
+               TextColor="#CD5656"
+               HorizontalOptions="Center" />
 
-    </VerticalStackLayout>
+            <Frame BackgroundColor="#FFE5E5"
+               CornerRadius="12"
+               Padding="10"
+               HasShadow="False"
+               WidthRequest="320"
+               HorizontalOptions="Center">
 
-</ContentPage>
+                <ProgressBar x:Name="progressBar"
+                         ProgressColor="#CD5656"
+                         HeightRequest="20"
+                         HorizontalOptions="FillAndExpand" />
+            </Frame>
+
+            <Button Text="Start"
+                WidthRequest="250"
+                HeightRequest="50"
+                BackgroundColor="#CD5656"
+                TextColor="White"
+                FontAttributes="Bold"
+                CornerRadius="25"
+                Clicked="ProgressBar_Click"
+                HorizontalOptions="Center" />
+        </VerticalStackLayout>
+
+
+    </ContentPage>

@@ -2,67 +2,74 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PROJECT_PROEL2.SimpleVotingForm"
-             Title="SimpleVotingForm">
+             Title="">
 
 
-    <ScrollView>
+
+        <ScrollView>
+            <VerticalStackLayout Padding="20" Spacing="20" HorizontalOptions="FillAndExpand">
+            <Label Text="Simple Voting Form" FontSize="30" HorizontalOptions="Center" FontAttributes="Bold" TextColor="#AF3E3E"/>
+            <Label Text="Presidential Vote"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   TextColor="#CD5656"
+                   HorizontalOptions="Center" />
+
+                <Label Text="Vote for the people"
+                   FontSize="16"
+                   TextColor="#555555"
+                   HorizontalOptions="Center" />
+
+                <Frame CornerRadius="15" Padding="15" BorderColor="#CD5656" BackgroundColor="White" HasShadow="True">
+                    <VerticalStackLayout Spacing="15">
+
+                        <RadioButton x:Name="Option1RadioButton" Content="BongBong Marcus" GroupName="VoteOptions" FontSize="18" />
+                        <RadioButton x:Name="Option2RadioButton" Content="Leni Rebredo" GroupName="VoteOptions" FontSize="18" />
+                        <RadioButton x:Name="Option3RadioButton" Content="Manny Pacquiao" GroupName="VoteOptions" FontSize="18" />
+
+                    </VerticalStackLayout>
+                </Frame>
+
+                <Button Text="Vote"
+                    BackgroundColor="#CD5656"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="25"
+                    WidthRequest="150"
+                    HorizontalOptions="Center"
+                    Clicked="OnVoteButtonClicked" />
+
+                <Label x:Name="ResultLabel"
+                   Text="Results:"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="#333333"
+                   HorizontalOptions="Center"
+                   Margin="0,30,0,10" />
 
 
-        <VerticalStackLayout Padding="10">
-            <Label 
-                Text="Presidential Vote"
-                FontSize="Large"
-                HorizontalOptions="Center"
-                VerticalOptions="Center" />
+                <FlexLayout FlowDirection="LeftToRight"
+                        JustifyContent="SpaceEvenly"
+                        Margin="0,0,0,20"
+                        Wrap="NoWrap"
+                        HorizontalOptions="FillAndExpand">
 
-            <Label 
-                Text="Vote for the people"
-                HorizontalOptions="Center" 
-                VerticalOptions="Center" />
+                    <VerticalStackLayout HorizontalOptions="Center" Spacing="8">
+                        <Image Source="bongbongmarcus.jpg" HeightRequest="100" WidthRequest="100" Aspect="AspectFill" />
+                        <Label x:Name="Option1Result" FontSize="12" HorizontalTextAlignment="Center" />
+                    </VerticalStackLayout>
 
-            <StackLayout>
-                <RadioButton x:Name ="Option1RadioButton"  Content="BongBong Marcus" GroupName="VoteOptions" Margin="0, 0, 0, 25"/>
-                <RadioButton x:Name="Option2RadioButton" Content="Leni Rebredo" GroupName="VoteOptions" Margin="0, 0, 0, 25"/>
-                <RadioButton x:Name="Option3RadioButton" Content="Manny Pacquaio" GroupName="VoteOptions" Margin="0, 0, 0, 25" />
-            </StackLayout>
+                    <VerticalStackLayout HorizontalOptions="Center" Spacing="8">
+                        <Image Source="lenilebrado.jpg" HeightRequest="100" WidthRequest="100" Aspect="AspectFill" />
+                        <Label x:Name="Option2Result" FontSize="12" HorizontalTextAlignment="Center" />
+                    </VerticalStackLayout>
 
-            <Button 
-                Text="Vote" Clicked="OnVoteButtonClicked"
-                HorizontalOptions="Center" 
-                VerticalOptions="Center" />
+                    <VerticalStackLayout HorizontalOptions="Center" Spacing="8">
+                        <Image Source="pacquiao.jpg" HeightRequest="100" WidthRequest="100" Aspect="AspectFill" />
+                        <Label x:Name="Option3Result" FontSize="12" HorizontalTextAlignment="Center" />
+                    </VerticalStackLayout>
 
-            <Label 
-                x:Name="ResultLabel" Margin="0, 25, 0, 0"
-                Text="Results:"
-                HorizontalOptions="Center"
-                VerticalOptions="Center" />
-            <FlexLayout FlowDirection="LeftToRight" JustifyContent="SpaceEvenly"
-                        Margin="0, 50, 0, 0">
-                <VerticalStackLayout>
-                    <Image Source="bongbongmarcus.jpg" HeightRequest="100" WidthRequest="100"
-                           Aspect="AspectFill">
-                        
-                    </Image>
-                    <Label x:Name="Option1Result"/>
-                </VerticalStackLayout>
-
-                <VerticalStackLayout>
-                    <Image Source="lenilebrado.jpg" HeightRequest="100" WidthRequest="100"
-                           Aspect="AspectFill">
-
-                    </Image>
-                    <Label x:Name="Option2Result"/>
-                </VerticalStackLayout>
-
-                <VerticalStackLayout>
-                    <Image Source="pacquiao.jpg" HeightRequest="100" WidthRequest="100"
-                           Aspect="AspectFill">
-
-                    </Image>
-                    <Label x:Name="Option3Result"/>
-                </VerticalStackLayout>
-            </FlexLayout>
-        </VerticalStackLayout>
-
-    </ScrollView>
-</ContentPage>
+                </FlexLayout>
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage>

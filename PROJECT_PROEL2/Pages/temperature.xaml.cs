@@ -8,10 +8,9 @@ public partial class temperature : ContentPage
     }
     private void OnConvertClicked(object sender, EventArgs e)
     {
-        // Try to read the input value
         if (double.TryParse(InputEntry.Text, out double inputTemp))
         {
-            // Check which option is selected
+ 
             string conversionType = ConversionPicker.SelectedItem?.ToString();
             double result = 0;
 

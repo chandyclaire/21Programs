@@ -21,7 +21,7 @@ public partial class TodoListForm : ContentPage
 
         foreach (var task in todoList)
         {
-            task.BulletTask = "ÅE" + task.Task;
+            task.BulletTask = "Å" + task.Task;
         }
 
         listView.ItemsSource = todoList;

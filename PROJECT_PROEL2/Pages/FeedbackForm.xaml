@@ -2,43 +2,85 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PROJECT_PROEL2.FeedbackForm"
-             Title="FeedbackForm">
-    <StackLayout Padding="20">
-        <Editor x:Name="feedbackEditor" 
-                Placeholder="Enter your feedback here" 
-                AutoSize="TextChanges" 
-                HeightRequest="150" />
+             Title="">
 
-        <Slider x:Name="ratingSlider" 
-                Minimum="0" 
-                Maximum="5" 
-                Value="5" 
-                ThumbColor="Blue" 
-                MinimumTrackColor="LightBlue" 
-                MaximumTrackColor="LightGray"
-                ValueChanged="OnSliderValueChanged"/>
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="25">
 
-        <Label x:Name="ratingLabel" 
-               Text="{Binding Source={x:Reference ratingSlider}, Path=Value, StringFormat='Rating: {0:F1}'}" 
-               HorizontalOptions="Center" />
+            <Label Text="💬 Feedback Form"
+                   FontSize="32"
+                   FontAttributes="Bold"
+                   TextColor="#CD5656"
+                   HorizontalOptions="Center"
+                   Margin="0,10"/>
 
-        <Button x:Name="submitButton" 
-                Text="Submit" 
-                Clicked="OnSubmitClicked" 
-                HorizontalOptions="Center" />
+            <Frame CornerRadius="10"
+                   BorderColor="#CD5656"
+                   BackgroundColor="White"
+                   WidthRequest="300"
+                   HeightRequest="150"
+                   Padding="10">
+                <Editor x:Name="feedbackEditor"
+                        Placeholder="Enter your feedback here"
+                        PlaceholderColor="Gray"
+                        AutoSize="TextChanges"
+                        FontSize="16"
+                        TextColor="Black"
+                        BackgroundColor="Transparent" />
+            </Frame>
 
+            <Label Text="Rate your experience:"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   HorizontalOptions="Center" />
 
-        <Label x:Name="feedbackSubmittedMessage" 
-               Text="Your feedback has been submitted. We appreciate your input!"
-               IsVisible="False" 
-               HorizontalOptions="Center" 
-               TextColor="Yellow" 
-               FontSize="Medium" />
+            <Slider x:Name="ratingSlider"
+                    Minimum="0"
+                    Maximum="5"
+                    Value="5"
+                    ThumbColor="#CD5656"
+                    MinimumTrackColor="#f59c9c"
+                    MaximumTrackColor="LightGray"
+                    ValueChanged="OnSliderValueChanged"
+                    WidthRequest="250" />
 
-        <Button x:Name="backButton"
-                Text="Back"
-                IsVisible="False"
-                Clicked="OnBackClicked"
-                HorizontalOptions="Center" />
-    </StackLayout>
+            <Label x:Name="ratingLabel"
+                   Text="{Binding Source={x:Reference ratingSlider}, Path=Value, StringFormat='Rating: {0:F1}'}"
+                   FontSize="16"
+                   TextColor="Black"
+                   HorizontalOptions="Center" />
+
+            <Button x:Name="submitButton"
+                    Text="Submit"
+                    Clicked="OnSubmitClicked"
+                    BackgroundColor="#CD5656"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    FontSize="18"
+                    WidthRequest="250"
+                    HeightRequest="50"
+                    CornerRadius="10"
+                    Margin="0,10"/>
+
+            <Label x:Name="feedbackSubmittedMessage"
+                   Text="✅ Your feedback has been submitted. We appreciate your input!"
+                   IsVisible="False"
+                   TextColor="Green"
+                   FontAttributes="Italic"
+                   FontSize="16"
+                   HorizontalTextAlignment="Center"
+                   Margin="10,5" />
+
+            <Button x:Name="backButton"
+                    Text="Back"
+                    IsVisible="False"
+                    Clicked="OnBackClicked"
+                    BackgroundColor="#777"
+                    TextColor="White"
+                    WidthRequest="150"
+                    HeightRequest="40"
+                    CornerRadius="10" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

@@ -2,25 +2,44 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PROJECT_PROEL2.CheckboxForm"
-             Title="CheckboxForm">
+             Title="">
 
-    <ScrollView>
+        <ScrollView>
+            <VerticalStackLayout Padding="20" Spacing="20" BackgroundColor="#FAFAFA">
+            <Label Text="Checkbox Form" FontSize="24" HorizontalOptions="Center" TextColor="#AF3E3E"/>
+            <Frame Padding="20"
+                   CornerRadius="25"
+                   BorderColor="#CD5656"
+                   BackgroundColor="White"
+                   HasShadow="True"
+                   HorizontalOptions="Center"
+                   WidthRequest="350">
 
-        <Border Stroke="Black" StrokeThickness="2"
-                StrokeShape="RoundRectangle 25, 25, 25, 25"
-                Padding="10, 10, 10, 10" BackgroundColor="White">
-            <VerticalStackLayout>
-                <StackLayout x:Name="CheckBoxContainer">
+                    <VerticalStackLayout Spacing="15">
 
-                    <Label Text="Selected interest" TextColor="Black"></Label>
+                        <Label Text="Select your interests"
+                           FontSize="22"
+                           FontAttributes="Bold"
+                           TextColor="#CD5656"
+                           HorizontalOptions="Center" />
 
-                    <Label x:Name="SelectedLabel" TextColor="Black"></Label>
+                    <StackLayout x:Name="CheckBoxContainer"
+                                 Spacing="10">
+                    </StackLayout>
 
-                </StackLayout>
+                        <Label Text="Selected Interests:"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="#333333"
+                           Margin="0,10,0,0" />
+
+                        <Label x:Name="SelectedLabel"
+                           FontSize="16"
+                           TextColor="#555555"
+                           LineBreakMode="WordWrap" />
+
+                    </VerticalStackLayout>
+                </Frame>
             </VerticalStackLayout>
-
-        </Border>
-        
-        
-    </ScrollView>
-</ContentPage>
+        </ScrollView>
+    </ContentPage>

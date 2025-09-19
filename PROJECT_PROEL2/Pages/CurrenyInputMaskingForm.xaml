@@ -2,41 +2,63 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PROJECT_PROEL2.CurrenyInputMaskingForm"
-             Title="CurrenyInputMaskingForm">
+             Title="">
 
-    <ScrollView>
-        
-    <VerticalStackLayout>
 
-            <Border BackgroundColor="White" Stroke="Black"
-                StrokeThickness="2" StrokeShape="RoundRectangle 20, 20, 20, 20">
+        <ScrollView>
+            <VerticalStackLayout Padding="25" Spacing="25">
+            <Label Text="Currency Input Masking Form" FontSize="24" HorizontalOptions="Center" TextColor="#AF3E3E"/>
+            <Frame BackgroundColor="White"
+                   CornerRadius="25"
+                   Padding="30"
+                   HasShadow="True"
+                   BorderColor="#CD5656">
 
-                <VerticalStackLayout Padding="20" Spacing="20">
+                    <VerticalStackLayout Spacing="25">
 
-                    <Label Text="Select Currency:" FontSize="20" TextColor="Black"/>
-
-                    <Picker x:Name="currencyPicker" Title="Choose a currency"
-                            ItemDisplayBinding="{Binding .}" TextColor="Black"/>
-
-                    <Label Text="Enter Amount:" FontSize="20" TextColor="Black"/>
-
-                    <Entry x:Name="amountEntry" 
-                           Placeholder="Enter number"
-                           Keyboard="Numeric"
-                           TextChanged="OnAmountChanged"
-                           TextColor="Black"/>      
-
-                    <Label x:Name="resultLabel"
-                           FontSize="28"
-                           TextColor="DarkBlue"
+                        <Label Text="Select Currency"
+                           FontSize="22"
                            FontAttributes="Bold"
-                           HorizontalOptions="Center"/>
+                           TextColor="#CD5656"
+                           HorizontalOptions="Center" />
 
-                </VerticalStackLayout>
+                        <Picker x:Name="currencyPicker"
+                            Title="Choose a currency"
+                            ItemDisplayBinding="{Binding .}"
+                            TextColor="#1E293B"
+                            FontSize="18"
+                            HorizontalOptions="FillAndExpand" />
 
-            </Border>
-        
-    </VerticalStackLayout>
-        
-    </ScrollView>
-</ContentPage>
+                        <Label Text="Enter Amount"
+                           FontSize="22"
+                           FontAttributes="Bold"
+                           TextColor="#CD5656"
+                           HorizontalOptions="Center" />
+
+                        <Border BackgroundColor="#DA6C6C"
+                            Stroke="#94A3B8"
+                            StrokeThickness="1.5"
+                            StrokeShape="RoundRectangle 15"
+                            Padding="10">
+                            <Entry x:Name="amountEntry"
+                               Placeholder="Enter number"
+                               PlaceholderColor="Black"  
+                                Keyboard="Numeric"
+                               TextChanged="OnAmountChanged"
+                               TextColor="#DA6C6C"
+                               FontSize="18"
+                               HorizontalOptions="FillAndExpand" />
+                        </Border>
+
+                        <Label x:Name="resultLabel"
+                           FontSize="28"
+                           FontAttributes="Bold"
+                           TextColor="Green"
+                           HorizontalOptions="Center"
+                           LineBreakMode="NoWrap" />
+
+                    </VerticalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage>

@@ -28,7 +28,6 @@ public partial class ContactForm : ContentPage
 			DisplayAlert("Invalid Email", "Error: email is invalid", "okay");
 			return;
 		}
-		// Clear entry
 		entry_Email.Text = "";
 		entry_Message.Text = "";
 		entry_Name.Text = "";

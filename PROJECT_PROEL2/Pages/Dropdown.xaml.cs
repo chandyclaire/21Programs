@@ -5,6 +5,10 @@ public partial class Dropdown : ContentPage
 	public Dropdown()
 	{
 		InitializeComponent();
+        colorPicker.SelectedIndex = 0;
+
+        var selectedColor = (string)colorPicker.SelectedItem;
+        UpdateColor(selectedColor);
     }
     private void OnPickerSelectedIndexChanged(object sender, EventArgs e)
     {
@@ -14,32 +18,27 @@ public partial class Dropdown : ContentPage
             return;
 
         string selectedColor = (string)picker.SelectedItem;
+        UpdateColor(selectedColor);
+    }
+    private void UpdateColor(string selectedColor)
+    {
         selectedColorLabel.Text = $"Your favorite color is: {selectedColor}";
 
-        // Set background color based on selection
-        switch (selectedColor.ToLower())
+        Color bgColor = selectedColor.ToLower() switch
         {
-            case "red":
-                this.BackgroundColor = Colors.Red;
-                break;
-            case "green":
-                this.BackgroundColor = Colors.Green;
-                break;
-            case "blue":
-                this.BackgroundColor = Colors.Blue;
-                break;
-            case "yellow":
-                this.BackgroundColor = Colors.Yellow;
-                break;
-            case "purple":
-                this.BackgroundColor = Colors.Purple;
-                break;
-            default:
-                this.BackgroundColor = Colors.White;
-                break;
-        }
-    }
+            "red" => Colors.Red,
+            "green" => Colors.Green,
+            "blue" => Colors.Blue,
+            "yellow" => Colors.Yellow,
+            "purple" => Colors.Purple,
+            _ => Colors.White,
+        };
 
+        this.BackgroundColor = bgColor;
+        selectedColorLabel.TextColor = bgColor;
+    }
 }
+
+
 
 

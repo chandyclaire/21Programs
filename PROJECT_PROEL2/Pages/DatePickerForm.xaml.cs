@@ -17,7 +17,7 @@ public partial class DatePickerForm : ContentPage
 
     private void UpdateLabel(DateTime date)
     {
-        
-        SelectDateLabel.Text = $"Selected date: {date:D}";
+
+        SelectDateLabel.Text = $"Selected date: {date:dddd, MMMM dd, yyyy}";
     }
 }

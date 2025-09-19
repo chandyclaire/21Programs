@@ -2,17 +2,32 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PROJECT_PROEL2.ImageSelectorForm"
-             Title="ImageSelectorForm">
-    
-    <StackLayout Padding="20" Spacing="20">
-    
+             Title="">
 
-        <Image x:Name="SelectedImage"
-               WidthRequest="300"
-               HeightRequest="300"
-               Aspect="AspectFit" />
+    <VerticalStackLayout Padding="20" Spacing="20">
+        <Label Text="ImageSelectorForm" FontSize="24" HorizontalOptions="Center" TextColor="#AF3E3E"/>
+        <Frame WidthRequest="320"
+               HeightRequest="320"
+               BorderColor="#CD5656"
+               CornerRadius="15"
+               HasShadow="True"
+               HorizontalOptions="Center"
+               VerticalOptions="Center">
+
+            <Image x:Name="SelectedImage"
+                   Aspect="AspectFit"
+                   WidthRequest="300"
+                   HeightRequest="300" />
+        </Frame>
 
         <Button Text="Pick Image"
-        Clicked="OnPickImageClicked"/>
-    </StackLayout>
+                BackgroundColor="#CD5656"
+                TextColor="White"
+                FontAttributes="Bold"
+                CornerRadius="10"
+                WidthRequest="150"
+                HeightRequest="45"
+                Clicked="OnPickImageClicked" />
+
+    </VerticalStackLayout>
 </ContentPage>

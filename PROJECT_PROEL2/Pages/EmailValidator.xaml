@@ -2,33 +2,39 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PROJECT_PROEL2.EmailValidator"
-             Title="EmailValidator">
-    <VerticalStackLayout>
-        <Label 
-            Text="Email Validator"
-            FontSize="Large"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Title="">
+    <VerticalStackLayout Padding="30" Spacing="25">
 
-        <Border Stroke="Black"
-            StrokeThickness="2"
-            StrokeShape="RoundRectangle 10"
-            Padding="16,0"
-            Margin="10"
-            HorizontalOptions="Center">
-            <Entry 
-                x:Name="entry_Email"
-                PlaceholderColor="DimGray" 
-                Placeholder="Email" 
-                WidthRequest="200" 
-                HeightRequest="15"></Entry>
-        </Border>
+        <Label Text="📧 Email Validator"
+               FontSize="28"
+               FontAttributes="Bold"
+               TextColor="#CD5656"
+               HorizontalOptions="Center" />
 
-        <Button
-            Text="Continue"
-            WidthRequest="250"
-            Clicked="ValidateEmail_Click"
-            ></Button>
+        <Frame CornerRadius="10"
+               Padding="10"
+               BorderColor="#CD5656"
+               BackgroundColor="White"
+               HasShadow="True"
+               WidthRequest="280">
+            <Entry x:Name="entry_Email"
+                   Placeholder="Enter your email"
+                   PlaceholderColor="Gray"
+                   TextColor="Black"
+                   FontSize="16"
+                   Keyboard="Email"
+                   HorizontalTextAlignment="Start" />
+        </Frame>
+
+        <Button Text="Continue"
+                Clicked="ValidateEmail_Click"
+                BackgroundColor="#CD5656"
+                TextColor="White"
+                FontSize="18"
+                FontAttributes="Bold"
+                WidthRequest="280"
+                HeightRequest="50"
+                CornerRadius="10" />
 
     </VerticalStackLayout>
 </ContentPage>

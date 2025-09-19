@@ -9,15 +9,19 @@ public partial class RegistrationForm : ContentPage
 
     private async void OnRegisterClicked(object sender, EventArgs e)
     {
+        if (string.IsNullOrWhiteSpace(PasswordEntry.Text) || string.IsNullOrWhiteSpace(ConfirmPasswordEntry.Text))
+        {
+            await DisplayAlert("Error", "Please enter and confirm your password.", "OK");
+            return;
+        }
+
         if (PasswordEntry.Text != ConfirmPasswordEntry.Text)
         {
             await DisplayAlert("Error", "Passwords do not match.", "OK");
+            return;
         }
-        else
-        {
-            
-            await DisplayAlert("Success", "Registration complete!", "OK");
-        }
+
+        await DisplayAlert("Success", "Registration complete!", "OK");
     }
 
 }

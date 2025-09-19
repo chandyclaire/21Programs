@@ -10,6 +10,8 @@ public partial class BasicCalculator : ContentPage
 
         Entry1.Focused += (s, e) => _focusedEntry = Entry1;
         Entry2.Focused += (s, e) => _focusedEntry = Entry2;
+        Entry1.TextChanged += OnEntryTextChanged;
+        Entry2.TextChanged += OnEntryTextChanged;
     }
 
     private void OnDigitClicked(object sender, EventArgs e)
@@ -17,6 +19,23 @@ public partial class BasicCalculator : ContentPage
         if (sender is Button button && _focusedEntry != null)
         {
             _focusedEntry.Text += button.Text;
+        }
+    }
+    private void OnEntryTextChanged(object sender, TextChangedEventArgs e)
+    {
+        if (sender is Entry entry)
+        {
+            string newText = e.NewTextValue;
+
+            string filtered = new string(newText
+                .Where((ch, idx) =>
+                    char.IsDigit(ch) ||
+                    (ch == '-' && idx == 0) ||
+                    (ch == '.' && !newText.Substring(0, idx).Contains('.')))
+                .ToArray());
+
+            if (entry.Text != filtered)
+                entry.Text = filtered;
         }
     }
 

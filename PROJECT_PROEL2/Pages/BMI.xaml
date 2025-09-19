@@ -2,32 +2,60 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PROJECT_PROEL2.BMI"
-             Title="BMI">
+             Title="">
     <VerticalStackLayout Padding="20" Spacing="15">
 
-        <Label Text="BMI Calculator"
-            FontSize="24"
-            HorizontalOptions="Center"
-            />
+        <Label Text="🧮 BMI Calculator"
+               FontSize="32"
+               FontAttributes="Bold"
+               TextColor="#CD5656"
+               HorizontalOptions="Center"
+               Margin="0,10"/>
 
-        <Entry x:Name="WeightEntry"
-            TextColor="Black"
-            Placeholder="Enter weight (kg)"
-            Keyboard="Numeric" />
+        <Frame CornerRadius="10"
+               Padding="10"
+               BorderColor="#CD5656"
+               BackgroundColor="White"
+               WidthRequest="280">
+            <Entry x:Name="WeightEntry"
+                   Placeholder="Enter weight (kg)"
+                   PlaceholderColor="Gray"
+                   TextColor="Black"
+                   Keyboard="Numeric"
+                   FontSize="18"
+                   HorizontalTextAlignment="Start"/>
+        </Frame>
 
-        <Entry x:Name="HeightEntry"
-            TextColor="Black"
-            Placeholder="Enter height (cm)"
-            Keyboard="Numeric" />
+        <Frame CornerRadius="10"
+               Padding="10"
+               BorderColor="#CD5656"
+               BackgroundColor="White"
+               WidthRequest="280">
+            <Entry x:Name="HeightEntry"
+                   Placeholder="Enter height (cm)"
+                   PlaceholderColor="Gray"
+                   TextColor="Black"
+                   Keyboard="Numeric"
+                   FontSize="18"
+                   HorizontalTextAlignment="Start"/>
+        </Frame>
 
         <Button Text="Calculate BMI"
-             Clicked="OnCalculateBMIClicked"
-             BackgroundColor="#8FD9FB"/>
+                Clicked="OnCalculateBMIClicked"
+                BackgroundColor="#CD5656"
+                TextColor="White"
+                FontAttributes="Bold"
+                FontSize="18"
+                CornerRadius="10"
+                WidthRequest="280"
+                HeightRequest="50" />
 
         <Label x:Name="ResultLabel"
-            FontSize="18"
-            TextColor="DarkBlue"
-            HorizontalOptions="Center" />
+               FontSize="20"
+               FontAttributes="Bold"
+               TextColor="#4CAF50"
+               HorizontalOptions="Center"
+               Margin="0,10"/>
 
     </VerticalStackLayout>
 

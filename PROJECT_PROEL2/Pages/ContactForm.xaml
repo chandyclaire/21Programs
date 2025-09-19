@@ -2,76 +2,86 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PROJECT_PROEL2.ContactForm"
-             Title="ContactForm">
-    <VerticalStackLayout>
-        <Label 
-            Text="Contact Form"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Title="">
+    <VerticalStackLayout Padding="30" Spacing="25">
 
-        <VerticalStackLayout>
-            <Border Stroke="Black"
-                StrokeThickness="2"
-                StrokeShape="RoundRectangle 10"
-                Padding="16,0"
-                Margin="10"
-                HorizontalOptions="Center">
-                <Entry 
-                    x:Name="entry_Name"
-                    PlaceholderColor="DimGray" 
-                    Placeholder="Name" 
-                    WidthRequest="200" 
-                    HeightRequest="15"></Entry>
-            </Border>
+        <Label Text="📞 Contact Form"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   TextColor="#CD5656"
+                   HorizontalOptions="Center"
+                   Margin="0,20,0,10" />
 
-            <Border Stroke="Black"
-                StrokeThickness="2"
-                StrokeShape="RoundRectangle 10"
-                Padding="16,0"
-                Margin="10"
-                HorizontalOptions="Center">
-                <Entry 
-                    x:Name="entry_Email"
-                    PlaceholderColor="DimGray" 
-                    Placeholder="Email" 
-                    WidthRequest="200" 
-                    HeightRequest="15"></Entry>
-            </Border>
+        <Frame CornerRadius="10"
+                   Padding="10"
+                   BorderColor="#CD5656"
+                   BackgroundColor="White"
+                   HasShadow="True"
+                   WidthRequest="280">
+            <Entry x:Name="entry_Name"
+                       Placeholder="Name"
+                       PlaceholderColor="Gray"
+                       TextColor="Black"
+                       FontSize="16"
+                       HorizontalTextAlignment="Start" />
+        </Frame>
 
-            <Border Stroke="Black"
-                StrokeThickness="2"
-                StrokeShape="RoundRectangle 10"
-                Padding="16,0"
-                Margin="10"
-                HorizontalOptions="Center">
-                <Entry 
-                    x:Name="entry_Phone"
-                    PlaceholderColor="DimGray" 
-                    Placeholder="Phone" 
-                    WidthRequest="200" 
-                    HeightRequest="15"></Entry>
-            </Border>
+        <Frame CornerRadius="10"
+                   Padding="10"
+                   BorderColor="#CD5656"
+                   BackgroundColor="White"
+                   HasShadow="True"
+                   WidthRequest="280">
+            <Entry x:Name="entry_Email"
+                       Placeholder="Email"
+                       PlaceholderColor="Gray"
+                       TextColor="Black"
+                       FontSize="16"
+                       HorizontalTextAlignment="Start" />
+        </Frame>
 
-            <Border Stroke="Black"
-                StrokeThickness="2"
-                StrokeShape="RoundRectangle 10"
-                Padding="16,0"
-                Margin="10"
-                HorizontalOptions="Center">
-                <Editor
-                    x:Name="entry_Message"
-                    PlaceholderColor="DimGray" 
-                    Placeholder="Message" 
-                    WidthRequest="200" 
-                    HeightRequest="100">
-                </Editor>
-            </Border>
+        <Frame CornerRadius="10"
+                   Padding="10"
+                   BorderColor="#CD5656"
+                   BackgroundColor="White"
+                   HasShadow="True"
+                   WidthRequest="280">
+            <Entry x:Name="entry_Phone"
+                       Placeholder="Phone"
+                       PlaceholderColor="Gray"
+                       TextColor="Black"
+                       FontSize="16"
+                       HorizontalTextAlignment="Start" />
+        </Frame>
 
-            <Button
-                Text="Continue"
-                WidthRequest="250"
-                Clicked="Continue_Click"
-                ></Button>
-        </VerticalStackLayout>
+        <Frame CornerRadius="10"
+                   Padding="10"
+                   BorderColor="#CD5656"
+                   BackgroundColor="White"
+                   HasShadow="True"
+                   WidthRequest="280"
+                   HeightRequest="120">
+            <Editor x:Name="entry_Message"
+                        Placeholder="Message"
+                        PlaceholderColor="Gray"
+                        TextColor="Black"
+                        FontSize="16"
+                        HorizontalTextAlignment="Start"
+                        AutoSize="TextChanges"
+                        BackgroundColor="Transparent" />
+        </Frame>
+
+
+        <Button Text="Continue"
+                    Clicked="Continue_Click"
+                    BackgroundColor="#CD5656"
+                    TextColor="White"
+                    FontSize="18"
+                    FontAttributes="Bold"
+                    WidthRequest="280"
+                    HeightRequest="50"
+                    CornerRadius="10"
+                    Margin="0,10" />
+
     </VerticalStackLayout>
 </ContentPage>

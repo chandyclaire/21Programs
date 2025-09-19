@@ -2,37 +2,70 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PROJECT_PROEL2.SimpleChat"
-             Title="SimpleChat">
-    <VerticalStackLayout Padding="10" Spacing="10">
-        <CollectionView x:Name="MessagesView" 
-                        ItemsSource="{Binding Chats}">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Border Stroke="CadetBlue"
-                        StrokeThickness="1"
-                        StrokeShape="RoundRectangle 2"
-                        Padding="16,5"
-                        HorizontalOptions="Center">
-                        <Label Text="{Binding}" 
-                               FontSize="14" />
-                    </Border>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+             Title="">
 
-        <!-- Input and Send button -->
-        <HorizontalStackLayout Spacing="5" HorizontalOptions="Center">
-            <Border Stroke="Black"
-                StrokeThickness="1"
-                StrokeShape="RoundRectangle 10"
-                Padding="16,0"
-                HorizontalOptions="Center">
-                <Entry x:Name="MessageEntry" 
-                       MinimumWidthRequest="200"
-                       Placeholder="Type a message..."/>
+
+    <VerticalStackLayout Padding="20" Spacing="15" VerticalOptions="FillAndExpand">
+        <Label Text="Simple Chat" FontSize="24" HorizontalOptions="Center" TextColor="#AF3E3E"/>
+        <Frame BackgroundColor="White"
+               CornerRadius="12"
+               Padding="10"
+               BorderColor="#CD5656"
+               HasShadow="False"
+               VerticalOptions="FillAndExpand"
+               Margin="0,0,0,10">
+
+            <CollectionView x:Name="MessagesView"
+                            ItemsSource="{Binding Chats}"
+                            VerticalOptions="FillAndExpand">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Stroke="#CD5656"
+                                StrokeThickness="1"
+                                StrokeShape="RoundRectangle 8"
+                                Padding="12"
+                                Margin="0,5"
+                                HorizontalOptions="Start">
+                            <Label Text="{Binding}"
+                                   FontSize="16"
+                                   TextColor="#333333"
+                                   LineBreakMode="WordWrap" />
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </Frame>
+
+        <HorizontalStackLayout Spacing="10" HorizontalOptions="Fill" VerticalOptions="End">
+
+            <Border Stroke="#CD5656"
+            StrokeThickness="1"
+            StrokeShape="RoundRectangle 15"
+            Padding="0"
+            HorizontalOptions="FillAndExpand"
+            BackgroundColor="White"
+            WidthRequest="400">
+
+                <Entry x:Name="MessageEntry"
+               Placeholder="Type your message..."
+               PlaceholderColor="#999999"
+               FontSize="16"
+               Margin="12,0"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="Center"
+               Keyboard="Chat" />
             </Border>
-            <Button Text="Send" 
-                    Clicked="OnSendClicked" />
+
+            <Button Text="Send"
+            BackgroundColor="#CD5656"
+            TextColor="White"
+            FontAttributes="Bold"
+            CornerRadius="15"
+            WidthRequest="80"
+            HeightRequest="45"
+            Clicked="OnSendClicked"
+            VerticalOptions="Center" />
         </HorizontalStackLayout>
 
     </VerticalStackLayout>

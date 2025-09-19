@@ -18,7 +18,6 @@ public partial class ImageSelectorForm : ContentPage
                 FileTypes = FilePickerFileType.Images
             });
 
-            // If a file was picked, display it in the Image control
             if (result != null)
             {
                 var stream = await result.OpenReadAsync();
@@ -27,7 +26,6 @@ public partial class ImageSelectorForm : ContentPage
         }
         catch (Exception ex)
         {
-            // Handle error
             await DisplayAlert("Error", $"An error occurred while picking the image: {ex.Message}", "OK");
         }
     }

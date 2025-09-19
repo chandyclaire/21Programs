@@ -12,9 +12,9 @@ public partial class SimpleLoginForm : ContentPage
         string username = UsernameEntry.Text;
         string password = PasswordEntry.Text;
 
-        if (username == "admin" && password == "admin")
+        if (username == "chandyclaire" && password == "chandy")
         {
-            DisplayAlert("Login Success", $"Welcome,{username}!","OK");
+            DisplayAlert("Login Success", $"Welcome{username}!","OK");
             UsernameEntry.Text = string.Empty;
             PasswordEntry.Text = string.Empty;
         }
